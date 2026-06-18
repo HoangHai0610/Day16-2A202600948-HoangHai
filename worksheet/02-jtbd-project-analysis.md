@@ -9,7 +9,7 @@ companion-reference: Strategyn_JTBD_Playbook.pdf (giảng viên gửi kèm)
 
 # Lab 2 — JTBD Project Analysis / Dùng JTBD để soi lại dự án nhóm
 
-**Tên dự án / sản phẩm:** _______________  
+**Tên dự án / sản phẩm:** DebugMate - trợ lý xác thực và hướng dẫn sửa lỗi code cho junior developer
 
 > Đây là **file duy nhất** của Lab 2.  
 > File này đồng thời đóng vai trò:
@@ -92,17 +92,17 @@ Phần lớn dự án nhóm viết quá rộng ở bước này, rồi sau đó 
 
 ### Khoanh đúng 1 lát cắt theo 4 điểm
 
-- [ ] **1 nhóm người dùng chính**
-- [ ] **1 hoàn cảnh / tình huống rõ**
-- [ ] **1 job cốt lõi**
-- [ ] **1 workflow đủ cụ thể để vẽ ra được**
+- [x] **1 nhóm người dùng chính**
+- [x] **1 hoàn cảnh / tình huống rõ**
+- [x] **1 job cốt lõi**
+- [x] **1 workflow đủ cụ thể để vẽ ra được**
 
 ### Điền nhanh trước khi làm
 
-- **Dự án của nhóm tôi là:** ___________________________________
-- **Lát cắt tôi chọn để phân tích hôm nay là:** ___________________________________
+- **Dự án của nhóm tôi là:** DebugMate - công cụ giúp developer chẩn đoán lỗi, hiểu nguyên nhân và chọn hướng sửa có kiểm chứng.
+- **Lát cắt tôi chọn để phân tích hôm nay là:** Junior developer trong 6 tháng đầu đi làm, đang bị lỗi build/test/runtime chặn task sprint và cần sửa đủ chắc để tạo pull request.
 - **Vì sao tôi chọn lát cắt này:**  
-  > ___________________________________
+  > Lát cắt này đủ hẹp để vẽ workflow: gặp lỗi, đọc log, tìm nguyên nhân, thử hướng sửa, chạy test, hỏi senior nếu chưa chắc, rồi commit/PR. Đây cũng là nơi AI có thể giúp mạnh nhưng rủi ro hallucination cao, nên cần JTBD để xác định AI nên chen vào bước nào.
 
 ### Viết quá rộng vs viết sắc hơn
 
@@ -121,13 +121,13 @@ Phần lớn dự án nhóm viết quá rộng ở bước này, rồi sau đó 
 ### Tóm tắt dự án trong 3 dòng
 
 1. **Nhóm tôi đang nghĩ mình đang giải quyết vấn đề gì?**  
-   > ___________________________________
+   > Junior developer mất nhiều thời gian chuyển qua lại giữa IDE, Google, Stack Overflow, tài liệu, ChatGPT và senior để hiểu lỗi; họ thường có câu trả lời nhanh nhưng không biết câu nào đủ đúng với codebase hiện tại.
 
 2. **Người dùng chính hiện nhóm đang nhắm tới là ai?**  
-   > ___________________________________
+   > Junior developer, intern developer hoặc fresher developer trong team sản phẩm/web/backend nhỏ, phải tự xử lý bug/task hằng ngày nhưng chưa đủ kinh nghiệm để nhanh chóng xác định nguyên nhân gốc.
 
 3. **Hiện tại người dùng đó đang giải quyết vấn đề này bằng cách nào?**  
-   > ___________________________________
+   > Họ copy lỗi lên Google/Stack Overflow/ChatGPT, đọc docs, thử nhiều snippet, chạy test lại, rồi hỏi senior khi bị kẹt hoặc khi không đủ tự tin commit.
 
 ---
 
@@ -139,21 +139,21 @@ Phần lớn dự án nhóm viết quá rộng ở bước này, rồi sau đó 
 ### Trả lời 4 câu ngắn
 
 1. **Ai đang gặp vấn đề này?**  
-   > ___________________________________
+   > Junior developer/fresher developer đang làm task thật trong sprint, đặc biệt là người chưa quen codebase, framework hoặc convention của team.
 
 2. **Vấn đề xuất hiện trong hoàn cảnh nào?**  
-   > ___________________________________
+   > Vấn đề xuất hiện khi code không chạy, build/test fail, API trả lỗi lạ, hoặc một thay đổi nhỏ làm hỏng flow khác ngay trước deadline PR/demo.
 
 3. **Hiện tại họ đang dùng giải pháp thay thế nào?**  
-   > ___________________________________
+   > Google, Stack Overflow, tài liệu chính thức, ChatGPT/Copilot/Cursor, search trong codebase, hỏi senior, hoặc trial-and-error bằng cách sửa rồi chạy lại.
 
 4. **Vì sao đây là thời điểm đáng giải?**  
-   > ___________________________________
+   > AI coding tools đã làm developer quen với câu trả lời tức thì, nhưng độ tin cậy vẫn là vấn đề lớn. Sau Lab 1, bài học từ Stack Overflow là entry point đã chuyển sang AI trong workflow, nên sản phẩm mới phải vừa nhanh vừa có cơ chế kiểm chứng.
 
 ### Tóm tắt market context trong 3-4 dòng
 
-> _______________________________________________  
-> _______________________________________________
+> Junior developer vẫn phải tự hoàn thành task, nhưng workflow debug hiện tại bị vỡ thành nhiều công cụ rời rạc: IDE, search, forum, docs, AI chat và senior.
+> Thị trường đáng giải lúc này vì AI đã khiến kỳ vọng “trả lời ngay trong context của tôi” trở thành mặc định, nhưng câu trả lời nhanh chưa đồng nghĩa với câu trả lời đúng. Cơ hội của DebugMate là đứng ở lớp chẩn đoán và xác thực, không chỉ sinh thêm code.
 
 ---
 
@@ -174,9 +174,9 @@ Phần lớn dự án nhóm viết quá rộng ở bước này, rồi sau đó 
 
 ### Điền
 
-- **Job executor của dự án này là:** ___________________________________
+- **Job executor của dự án này là:** Junior developer đang trực tiếp xử lý lỗi trong task được giao.
 - **Vì sao tôi tin đây là người trực tiếp "thuê" giải pháp để làm job:**  
-  > ___________________________________
+  > Đây là người trực tiếp mở IDE, đọc log, tìm nguyên nhân, thử fix, chạy test và quyết định có cần hỏi senior hay không. Tech lead có thể là buyer/influencer, nhưng người thực hiện job hằng ngày là junior developer.
 
 ---
 
@@ -200,23 +200,23 @@ Phần lớn dự án nhóm viết quá rộng ở bước này, rồi sau đó 
 
 ### 3 tiêu chí tự kiểm
 
-- [ ] Nếu bỏ tool hiện tại đi, job này vẫn còn tồn tại
-- [ ] Trong câu không có tên sản phẩm, AI, chatbot, app, màn hình
-- [ ] Câu đang mô tả **điều user muốn hoàn thành**, không phải thứ product đang làm
+- [x] Nếu bỏ tool hiện tại đi, job này vẫn còn tồn tại
+- [x] Trong câu không có tên sản phẩm, AI, chatbot, app, màn hình
+- [x] Câu đang mô tả **điều user muốn hoàn thành**, không phải thứ product đang làm
 
 ### Bản nháp 1
 
 **Core JTBD bản nháp:**  
-> _______________________________________________
+> Sửa lỗi code nhanh hơn bằng AI để kịp hoàn thành task.
 
 ### Gạch bỏ từ solution nếu có
 
-- Các từ solution tôi đang lỡ nhét vào câu: _________________________________
+- Các từ solution tôi đang lỡ nhét vào câu: `AI`, `sửa bằng công cụ`, `nhanh hơn` theo kiểu mô tả feature thay vì job.
 
 ### Bản chốt
 
 **Core JTBD cuối cùng:**  
-> _______________________________________________
+> Chẩn đoán và sửa lỗi code đang chặn tiến độ trong lúc thực hiện task sprint với đủ độ tin cậy để đưa vào codebase.
 
 ---
 
@@ -239,15 +239,15 @@ When [trigger], I want to [motivation], so I can [outcome].
 
 | # | Trigger / When | Motivation / I want to | Outcome / so I can | Điều story này cho thấy |
 |---|---|---|---|---|
-| JS1 | | | | |
-| JS2 | | | | |
-| JS3 | | | | |
+| JS1 | Khi build/test fail ngay trước lúc tôi cần tạo PR | Tôi muốn nhanh chóng biết lỗi đến từ file, config hay thay đổi nào | Tôi có thể sửa đúng chỗ và không trễ deadline sprint | Pain nằm ở chẩn đoán nguyên nhân, không chỉ ở viết code mới |
+| JS2 | Khi tôi gặp lỗi từ framework/library chưa quen | Tôi muốn hiểu API, version hoặc config nào đang liên quan | Tôi tránh copy snippet sai hoặc sửa bừa làm phát sinh lỗi khác | User cần giải thích có ngữ cảnh và nguồn đáng tin |
+| JS3 | Khi Google/Stack Overflow/ChatGPT đưa nhiều hướng sửa khác nhau | Tôi muốn biết hướng nào an toàn nhất với codebase hiện tại | Tôi commit tự tin hơn và giảm số lần phải hỏi senior | Giá trị chính là xác thực, không phải chỉ tạo thêm đáp án |
 
 ### Tự kiểm nhanh
 
-- [ ] Mỗi story là một **tình huống thật**, không phải slogan chung chung
-- [ ] 3 story không trùng hệt nhau
-- [ ] Sau khi đọc 3 story, tôi hình dung được lúc nào product của mình đáng xuất hiện
+- [x] Mỗi story là một **tình huống thật**, không phải slogan chung chung
+- [x] 3 story không trùng hệt nhau
+- [x] Sau khi đọc 3 story, tôi hình dung được lúc nào product của mình đáng xuất hiện
 
 ---
 
@@ -268,14 +268,14 @@ Qua JTBD lens, đối thủ không chỉ là app cùng ngành.
 
 | Alternative hiện tại | User đang thuê nó để làm gì? | Nó làm tốt gì? | Nó fail ở đâu? | Switching cost hiện tại cao hay thấp? |
 |---|---|---|---|---|
-| Alt 1 | | | | |
-| Alt 2 | | | | |
-| Alt 3 | | | | |
+| Google / Stack Overflow / tài liệu chính thức | Tìm lỗi giống mình, đọc giải thích, lấy snippet hoặc cấu hình mẫu | Rộng, miễn phí, có nhiều dấu vết cộng đồng và tài liệu gốc | Không luôn khớp version/codebase; tốn thời gian lọc; nhiều thread cũ hoặc thiếu context | Thấp |
+| ChatGPT / Copilot / Cursor | Giải thích lỗi, gợi ý nguyên nhân, sinh hướng sửa nhanh | Rất nhanh, hội thoại được, có thể cá nhân hóa theo prompt/code đang mở | Có thể hallucinate, thiếu nguồn, tự tin quá mức; user khó biết khi nào nên tin | Thấp đến trung bình |
+| Hỏi senior / mentor trong team | Xác nhận nguyên nhân và hướng sửa phù hợp với codebase | Đáng tin, hiểu context team, giúp junior học nhanh | Senior là bottleneck; có social cost; không phải lúc nào cũng sẵn sàng | Cao về thời gian và quan hệ |
 
 ### Kết luận nhanh
 
 **Nếu project của tôi biến mất hôm nay, user nhiều khả năng sẽ quay về:**  
-> _______________________________________________
+> ChatGPT/Cursor để có câu trả lời nhanh, rồi hỏi senior để xác nhận khi không đủ tự tin. Google/Stack Overflow vẫn được dùng cho lỗi phổ biến hoặc để tìm nguồn kiểm chứng.
 
 ---
 
@@ -310,23 +310,23 @@ Mục tiêu là nhìn ra:
 
 | Step | Trong workflow này user đang cố làm gì? | Hôm nay họ đang dùng gì? | Friction / pain hiện tại | Mức đau |
 |---|---|---|---|---|
-| Define | | | | Low / Med / High |
-| Locate | | | | Low / Med / High |
-| Prepare | | | | Low / Med / High |
-| Confirm | | | | Low / Med / High |
-| Execute | | | | Low / Med / High |
-| Monitor | | | | Low / Med / High |
-| Modify | | | | Low / Med / High |
-| Conclude | | | | Low / Med / High |
+| Define | Xác định lỗi nào đang chặn task và kết quả mong muốn sau khi sửa | Ticket/Jira, IDE, terminal, log, test report | Junior dễ nhầm triệu chứng với nguyên nhân; chưa biết lỗi nào quan trọng nhất | Med |
+| Locate | Tìm file, function, config, dependency hoặc thread/docs liên quan | IDE search, grep, Google, Stack Overflow, docs | Mất thời gian lọc; kết quả ngoài web thường không khớp codebase/version | High |
+| Prepare | Gom error message, stack trace, đoạn code, version, test fail để hỏi hoặc phân tích | Copy/paste thủ công vào ChatGPT/senior, screenshot, log | Context bị thiếu hoặc quá dài; dễ lộ thông tin nhạy cảm; prompt rời rạc | High |
+| Confirm | Xác định nguyên nhân gốc và chọn hướng sửa đáng tin | Chạy test, đọc docs, hỏi senior, so nhiều câu trả lời AI | Khó biết AI/snippet có đúng không; user sợ sửa sai làm hỏng phần khác | High |
+| Execute | Sửa code/config theo hướng đã chọn | IDE, Copilot/Cursor, manual edit | Viết code không phải điểm đau lớn nhất nếu nguyên nhân đã rõ | Med |
+| Monitor | Chạy lại test/build/local flow để xem lỗi còn không | Terminal, test runner, CI, log | Test lâu, lỗi phụ xuất hiện, khó đọc log tiếp theo | Med |
+| Modify | Điều chỉnh hướng sửa khi test vẫn fail hoặc phát sinh lỗi mới | Trial-and-error, hỏi AI tiếp, hỏi senior | Dễ vòng lặp sửa bừa; mất tự tin; context hội thoại bị trôi | High |
+| Conclude | Viết commit/PR note, giải thích nguyên nhân và cách test | Git, GitHub/GitLab, Jira | Ít đau hơn, nhưng junior đôi khi giải thích thiếu rõ ràng | Low |
 
 ### Chốt 2 bước đau nhất
 
-**Bước đau nhất #1:** _________________________________  
-**Bước đau nhất #2:** _________________________________
+**Bước đau nhất #1:** Confirm - xác nhận nguyên nhân gốc và hướng sửa đáng tin
+**Bước đau nhất #2:** Locate / Prepare - tìm và gom đúng context trước khi phân tích
 
 **Vì sao đây là nơi đáng chú ý nhất:**  
-> _______________________________________________  
-> _______________________________________________
+> Nếu locate/prepare sai, AI hoặc senior đều nhận context thiếu và trả lời lệch.
+> Nếu confirm sai, user có thể sửa nhanh nhưng sai hướng, tạo bug mới hoặc mất thêm thời gian hỏi lại senior. Đây là điểm product nên thắng bằng trust, không chỉ bằng tốc độ sinh code.
 
 ---
 
@@ -345,16 +345,16 @@ Sau khi map workflow, mới hỏi:
 
 | Step | AI nên giúp bằng cách nào? | Vì sao AI hợp ở đây? | Rủi ro chính nếu dùng AI |
 |---|---|---|---|
-| 1 | | | |
-| 2 | | | |
+| Locate / Prepare | Tự gom stack trace, file liên quan, dependency/version và lịch sử thay đổi gần nhất thành một debugging brief ngắn | AI mạnh ở việc đọc nhiều ngữ cảnh rời rạc, tóm tắt và phát hiện pattern ban đầu | Lấy thiếu context, lộ thông tin nhạy cảm, hoặc tóm tắt sai mức ưu tiên |
+| Confirm / Modify | Đề xuất 1-3 giả thuyết nguyên nhân, hướng sửa tối thiểu, nguồn/docs liên quan và test cần chạy để kiểm chứng | AI tạo giá trị khi biến câu trả lời thành kế hoạch kiểm chứng, giúp junior không chỉ “tin đại” | Hallucination, overconfidence, đề xuất fix không phù hợp convention/codebase |
 
 ### Kết luận nhanh
 
 **AI leverage point quan trọng nhất của dự án tôi là:**  
-> _______________________________________________
+> Dùng AI để chẩn đoán có kiểm chứng: gom đúng context, nêu giả thuyết nguyên nhân, đề xuất hướng sửa tối thiểu và kèm bước test/xác minh.
 
 **Vì sao không phải ở bước khác:**  
-> _______________________________________________
+> Nếu chỉ dùng AI ở bước execute để sinh code, sản phẩm sẽ giống Copilot/Cursor và dễ bị thay thế. Điểm đau lớn hơn nằm ở việc junior không biết nên tin hướng sửa nào và cần kiểm chứng ra sao trước khi đưa vào codebase.
 
 ---
 
@@ -373,13 +373,13 @@ vì [giá trị rõ nhất].
 
 ### Bản hypothesis của tôi
 
-> _______________________________________________  
-> _______________________________________________
+> Nếu chúng ta giúp junior developer chẩn đoán và xác minh hướng sửa lỗi ở bước Locate/Prepare và Confirm,
+> bằng cách AI đọc error, log, code context, docs liên quan và đề xuất test kiểm chứng, thì họ sẽ chuyển từ Google/Stack Overflow/ChatGPT rời rạc sang DebugMate trong workflow IDE/PR, vì họ nhận được câu trả lời nhanh hơn nhưng vẫn có traceability và giảm số lần phải hỏi senior.
 
 ### Tín hiệu sớm nếu hypothesis này đúng
 
-1. _______________________________________________
-2. _______________________________________________
+1. Trong pilot, junior developer giải quyết được phần lớn lỗi phổ biến trong vòng 15-20 phút mà không cần hỏi senior ngay từ đầu.
+2. User quay lại dùng cho nhiều bug/task trong tuần và chủ động chạy test/đọc nguồn kiểm chứng do sản phẩm gợi ý trước khi tạo PR.
 
 ---
 
@@ -399,15 +399,15 @@ Job story chưa có research vẫn chỉ là **giả thuyết tốt hơn**, chư
 
 | Assumption | Vì sao assumption này rủi ro? | Tôi đang có bằng chứng gì? | Cần validate bằng cách nào tiếp theo? |
 |---|---|---|---|
-| A1 | | | |
-| A2 | | | |
-| A3 | | | |
-| A4 | | | |
-| A5 | | | |
+| A1: Junior developer là job executor đúng | Có thể người ra quyết định thật là tech lead, còn junior chỉ dùng theo tool team chọn | Workflow debug hằng ngày do junior trực tiếp làm; họ là người cảm pain đầu tiên | Phỏng vấn 5-7 junior/fresher và 2-3 tech lead để tách user, buyer, influencer |
+| A2: Pain đủ thường xuyên và đủ đau | Nếu lỗi khó không xảy ra thường xuyên, sản phẩm chỉ là tiện ích phụ | Bug/build/test fail là hoạt động thường ngày trong dev workflow, nhưng mức đau thay đổi theo team | Diary study 1 tuần: ghi số lần bị block, thời gian mất, số lần hỏi senior |
+| A3: User tin AI hơn nếu có nguồn và test kiểm chứng | Có nguồn/test chưa chắc đủ để user tin, nhất là code production | Lab 1 cho thấy developer dùng AI nhiều nhưng vẫn nghi ngờ accuracy; trust là khoảng trống thật | Prototype có citation/test plan, đo mức confidence trước/sau và tỷ lệ accept suggestion |
+| A4: AI có đủ context codebase để chẩn đoán đúng | Nếu không truy cập đúng file/log/dependency, output vẫn chung chung như ChatGPT | Current alternatives fail nhiều vì thiếu context riêng của repo | Thử trên 20 lỗi thật đã có lời giải, so accuracy giữa ChatGPT thường và bản có context repo |
+| A5: Giá trị đủ mạnh để thắng current alternatives miễn phí | Google/Stack Overflow/ChatGPT/Cursor có sẵn và switching cost thấp | Pain lớn nhất không phải “không có câu trả lời” mà là “không biết câu nào đáng tin” | Test willingness-to-switch: cho user xử lý cùng bug bằng alternative hiện tại và prototype, đo thời gian + niềm tin + ý định dùng lại |
 
 ### Assumption nguy hiểm nhất nếu tôi đang sai
 
-> _______________________________________________
+> Nguy hiểm nhất là A3: junior developer không đủ tin kết quả AI dù có citation và test plan. Nếu trust không tăng, DebugMate sẽ chỉ là một AI answer generator khác và khó thắng ChatGPT/Cursor.
 
 ---
 
@@ -431,9 +431,9 @@ Job story chưa có research vẫn chỉ là **giả thuyết tốt hơn**, chư
 
 | Ý phản biện tôi nghe được | Nó chạm vào phần nào? | Tôi sẽ giữ / sửa gì? |
 |---|---|---|
-| | | |
-| | | |
-| | | |
+| Có thể người dùng thật không phải junior mà là tech lead muốn giảm thời gian review/hỗ trợ | Job executor / buyer | Giữ junior là job executor, nhưng ghi tech lead là buyer/influencer cần validate |
+| Current alternative mạnh nhất có thể là hỏi senior, không phải Stack Overflow hay ChatGPT | Alternatives / switching cost | Sửa hypothesis để nhấn mạnh giảm số lần hỏi senior, không thay thế hoàn toàn senior |
+| AI sinh code dễ bị trùng với Copilot/Cursor; khác biệt phải nằm ở kiểm chứng | AI leverage point | Giữ leverage point ở Confirm/Modify và thêm citation/test plan làm phần giá trị chính |
 
 ---
 
@@ -441,52 +441,52 @@ Job story chưa có research vẫn chỉ là **giả thuyết tốt hơn**, chư
 
 ### Sau khi nghe phản biện, tôi thay đổi gì?
 
-- [ ] Giữ nguyên `job executor`
+- [x] Giữ nguyên `job executor`
 - [ ] Sửa `job executor`
 - [ ] Giữ nguyên `core JTBD`
-- [ ] Sửa `core JTBD`
-- [ ] Giữ nguyên `AI leverage point`
+- [x] Sửa `core JTBD`
+- [x] Giữ nguyên `AI leverage point`
 - [ ] Sửa `AI leverage point`
 - [ ] Giữ nguyên `product hypothesis`
-- [ ] Sửa `product hypothesis`
+- [x] Sửa `product hypothesis`
 
 ### Vì sao tôi giữ / sửa?
 
-> _______________________________________________  
-> _______________________________________________
+> Tôi giữ junior developer là job executor vì họ là người trực tiếp bị block, tự đọc lỗi và tự thử fix hằng ngày.
+> Tôi sửa nhẹ core JTBD và hypothesis để tránh biến sản phẩm thành “AI viết code”; trọng tâm cuối cùng là chẩn đoán và xác minh hướng sửa đủ tin cậy, đồng thời giảm phụ thuộc vào senior ở các lỗi thường gặp.
 
 ### Version cuối cùng tôi nộp
 
 **Job executor:**  
-> _______________________________________________
+> Junior developer đang trực tiếp xử lý lỗi trong task được giao.
 
 **Core JTBD:**  
-> _______________________________________________
+> Chẩn đoán và sửa lỗi code đang chặn tiến độ trong lúc thực hiện task sprint với đủ độ tin cậy để đưa vào codebase.
 
 **2 bước đau nhất trong workflow:**  
-> _______________________________________________
+> Confirm - xác nhận nguyên nhân/hướng sửa đáng tin; Locate/Prepare - tìm và gom đúng context trước khi phân tích.
 
 **AI leverage point chính:**  
-> _______________________________________________
+> AI gom context, nêu giả thuyết nguyên nhân, đề xuất hướng sửa tối thiểu và kèm nguồn/test để user kiểm chứng trước khi commit.
 
 **Product hypothesis:**  
-> _______________________________________________
+> Nếu DebugMate giúp junior developer chẩn đoán và xác minh hướng sửa lỗi trong IDE/PR workflow, họ sẽ chuyển bớt từ Google/Stack Overflow/ChatGPT rời rạc sang DebugMate vì nhận được câu trả lời nhanh hơn, có ngữ cảnh codebase hơn và giảm số lần phải hỏi senior.
 
 **Assumption cần validate đầu tiên:**  
-> _______________________________________________
+> Junior developer có thực sự tin và dùng đề xuất AI nhiều hơn khi output có nguồn, context repo và test plan kiểm chứng hay không.
 
 ---
 
 ## Checklist trước khi nộp
 
-- [ ] Tôi đã khoanh đúng 1 lát cắt cụ thể của dự án.
-- [ ] Tôi đã phân biệt được `job executor` với buyer / influencer.
-- [ ] `Core JTBD` của tôi không nhét solution vào câu.
-- [ ] Tôi đã viết đủ 3 `job stories`.
-- [ ] Tôi đã điền `JTBD lite map` và khoanh ra 2 bước đau nhất.
-- [ ] Tôi đã chỉ ra `AI leverage point` thay vì nhảy thẳng vào feature list.
-- [ ] Tôi đã ghi rõ `assumptions to validate`.
-- [ ] Tôi đã sửa version cuối sau khi share trong bàn.
+- [x] Tôi đã khoanh đúng 1 lát cắt cụ thể của dự án.
+- [x] Tôi đã phân biệt được `job executor` với buyer / influencer.
+- [x] `Core JTBD` của tôi không nhét solution vào câu.
+- [x] Tôi đã viết đủ 3 `job stories`.
+- [x] Tôi đã điền `JTBD lite map` và khoanh ra 2 bước đau nhất.
+- [x] Tôi đã chỉ ra `AI leverage point` thay vì nhảy thẳng vào feature list.
+- [x] Tôi đã ghi rõ `assumptions to validate`.
+- [ ] Tôi đã sửa version cuối sau khi share trong bàn. *(Bản này đang dùng phản biện mẫu; nếu đã share thật, thay bảng phản biện bằng ghi chú lớp.)*
 
 ---
 
